@@ -1,6 +1,6 @@
 # ユニーク要素
 arr1 = [1, 2, 3, 1, 2, 1, 2, 6, 5, "ruby","python","ruby"]
-puts arr.uniq
+puts arr1.uniq
 
 # nil削除
 arr2 = ["ruby", nil, "java", nil, nil, "python"]
@@ -60,3 +60,8 @@ puts arr14.max() # 引数の数字で大きい順に取得
 # 最小値
 arr15 = [12, 39, 49, 23, 52, 99, 20]
 puts arr15.min() 
+
+# 絶対値
+n1 = 5
+n2 = 9
+p (n1 - n2).abs
