@@ -71,5 +71,14 @@ arr16 = [1, 2, 3, 4, 5]
 arr17 = [2, 5, 3]
 p arr16 - arr17
 
+# 2次元配列
+x = []
+3.times do
+  y = []
+  3.times do
+    y << 1
+  end
+  x << y
+end
 
-test
+p x
