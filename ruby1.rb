@@ -65,3 +65,8 @@ puts arr15.min()
 n1 = 5
 n2 = 9
 p (n1 - n2).abs
+
+# 配列の差分
+arr16 = [1, 2, 3, 4, 5]
+arr17 = [2, 5, 3]
+p arr16 - arr17
