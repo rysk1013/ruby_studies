@@ -70,3 +70,6 @@ p (n1 - n2).abs
 arr16 = [1, 2, 3, 4, 5]
 arr17 = [2, 5, 3]
 p arr16 - arr17
+
+
+test
