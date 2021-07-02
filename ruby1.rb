@@ -83,4 +83,6 @@ end
 
 p x
 
-# test
+# 多次元配列を1次元配列にする
+arr18 = [1, 2, 3, [10, 100]]
+p arr19 = arr18.flatten
