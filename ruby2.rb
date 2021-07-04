@@ -22,6 +22,11 @@ puts str5.reverse
 str6 = "東京 大阪 名古屋"
 p str6.gsub(/( | )+/, ",")
 
+# 10進数から2進数に変換
+num2 = 255
+str7 = num2.to_s(2)
+p str7
+
 # Hash
 hash1 = { "像" => 5, "ライオン" => 6, "トラ" => 7 }
 p hash1.keys
