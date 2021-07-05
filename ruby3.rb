@@ -12,3 +12,11 @@ end
   next unless n == 6
   puts n
 end
+
+# while文
+num1 = 456
+while num1.to_s != num1.to_s.reverse do
+ num1 = num1.to_i + num1.to_s.reverse.to_i
+ p num1
+end
+puts num1
