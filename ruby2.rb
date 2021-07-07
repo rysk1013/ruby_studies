@@ -27,6 +27,9 @@ num2 = 255
 str7 = num2.to_s(2)
 p str7
 
+# nilガード
+age ||= 12 #ageがnilなら12が代入される
+
 # Hash
 hash1 = { "像" => 5, "ライオン" => 6, "トラ" => 7 }
 p hash1.keys
