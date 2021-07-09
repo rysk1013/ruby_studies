@@ -92,18 +92,18 @@ p arr20.concat(arr21) # 引数は1つだけ設定できる
 
 # 値の追加
 arr22 = [1, 2, 3, 4, 5]
-arr22.unshift(0)
+arr22.unshift(0) # 先頭に追加
 p arr22
 
-arr22.push(6)
+arr22.push(6) # 最後に追加
 p arr22
 
 # 値の削除
 arr23 = [1, 2, 3, 4, 5]
-arr23.shift(1)
+arr23.shift(1) # 先頭の値の削除
 p arr23
 
-arr23.pop(1)
+arr23.pop(1) # 最後の値の削除
 p arr23
 
 # ループしているときの配列の先頭の値の表し方
