@@ -13,6 +13,11 @@ end
   puts n
 end
 
+arr2 = ["ruby", "java", "python"]
+arr2.each_with_index do |a, i|
+  puts "#{i + 1}:#{a}"
+end
+
 # while文
 num1 = 456
 while num1.to_s != num1.to_s.reverse do
