@@ -55,3 +55,15 @@ hash6 = {key1: "memo1", keys2: "mome2"}
 hash6.merge(key3: "memo3")
 p hash6
 # mergegは非破壊的メソッド
+
+hash7 = {"a"=> 2, "b"=> 3, "c"=> 1} 
+str8 = "abcabcabcabc".split('')
+new = []
+str8.each do |s|
+  # ハッシュのvalueの数値は計算できる
+  hash7[s] -= 1
+  if hash7[s] >= 0
+    new << s
+  end
+end
+p new
