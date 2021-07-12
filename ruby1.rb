@@ -112,3 +112,10 @@ arr25 = [1, 2, 3, 4, 5, 6]
 arr24.each_with_index do |a, i|
   p arr25[i - i]
 end
+
+# 数値・アルファベットの配列作成ほうほう
+# '*'は配列展開(to_aでも同様)
+alphabet = [*'a'..'z']
+numbers = [*1..26]
+p alphabet
+p numbers
