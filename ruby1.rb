@@ -119,3 +119,7 @@ alphabet = [*'a'..'z']
 numbers = [*1..26]
 p alphabet
 p numbers
+
+# 配列内の同じ値をグループ化する
+arr26 = [9, 1, 2, 3, 1, 4, 3, 2, 4, 9]
+p arr26.group_by{|a| a} # ハッシュでグループ化
