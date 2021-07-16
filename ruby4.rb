@@ -22,3 +22,27 @@
 # ２のn乗に比例することを表している
 # データに対して全ての組み合わせを調べるようなアルゴリズムがこれに当たる
 # 指数時間アルゴリズムと呼ばれ、実用的にもとても時間が掛かるアルゴリズム
+
+# 探索アルゴリズム
+# 1.線形探索(O(n))
+# n個のデータを１つずつ見て、指定された値を見つける方法
+input = [3, 5, 9 ,12, 15, 21, 29, 35, 42, 51, 62, 78, 81, 87, 92, 93]
+
+def linear_search(key, input)
+  find_flag = false
+
+  for i in 0..input.length
+    if input[i] == key
+      puts "#{key}はinput[#{i}]で発見しました！"
+      find_flag = true
+      break
+    end
+  end
+  unless find_flag
+    puts "#{key}は見つかりませでした"
+  end
+end
+
+linear_search(62, input)
+linear_search(9, input)
+linear_search(10, input)
