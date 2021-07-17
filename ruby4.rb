@@ -46,3 +46,56 @@ end
 linear_search(62, input)
 linear_search(9, input)
 linear_search(10, input)
+
+# 二分探索
+# データは大きさ順に並んでいる必要がある
+
+def binary_search1(key, input)
+  find_flag = false
+
+  left = 0
+  right = input.length - 1
+  center = (left + right) / 2
+
+  while left <= right
+    center = (left + right) / 2
+    if key == input[center]
+      find_flag = true
+      break
+    end
+    break if center == right || center == left
+    right = center if key <= input[center]; left = center if key >= input[center]
+  end
+
+  if find_flag
+    puts "#{key}はinput[#{center}]で発見しました"
+  else
+    puts "#{key}は見つかりませんでした"
+  end
+end
+
+binary_search1(62, input)
+
+input2 = [1,2,3,4,5,6,7,8,9,10]
+
+def binary_search2(key, input)
+  left = 0
+  right = input.length - 1
+  center = (left + right) / 2
+
+  while left <= right
+    center = (left + right) / 2
+
+    if input[center] == key
+      return "index = #{center}"
+    elsif input[center] < key
+      left = center + 1
+    else
+      right = center - 1
+    end
+  end
+
+  return "nothing"
+end
+
+puts binary_search2(5, input2)
