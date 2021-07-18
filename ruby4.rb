@@ -49,7 +49,6 @@ linear_search(10, input)
 
 # 二分探索
 # データは大きさ順に並んでいる必要がある
-
 def binary_search1(key, input)
   find_flag = false
 
