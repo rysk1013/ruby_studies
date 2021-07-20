@@ -136,3 +136,18 @@ tmp = arr28[x - 1]
 arr28[x - 1] = arr28[y - 1]
 arr28[y - 1] = tmp
 p arr28
+
+# 指定の位置に値を追加
+arr29 = [1, 2, 3, 4, 5]
+arr29 = arr29.insert(3, 10) # 第1引数に場所、第2引数に追加する値
+p arr29
+
+# 各要素のペアについてのかけ算
+n = 5
+arr30 = [1, 2, 3, 4, 5]        
+n.times do |i|
+    i.times do |j|
+        # puts "#{arr30[i]} * #{arr30[j]}"
+        puts arr30[i] * arr30[j]     
+    end
+end
