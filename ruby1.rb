@@ -151,3 +151,7 @@ n.times do |i|
         puts arr30[i] * arr30[j]     
     end
 end
+
+# 配列の生成
+arr31 = Array.new(10, 1) # 第1引数に要素の数、第2引数で初期値の指定ができる
+p arr31
