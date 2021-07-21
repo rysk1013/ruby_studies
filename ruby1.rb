@@ -155,3 +155,49 @@ end
 # 配列の生成
 arr31 = Array.new(10, 1) # 第1引数に要素の数、第2引数で初期値の指定ができる
 p arr31
+
+# 一つの配列の値の比較
+n = 5
+students = [119,102,187,191,132]
+ans = []
+diff = 101
+(0..n).each do |i|
+  ((i+1)..n).each do |j|
+     if i < (students.length - 1) && j < (students.length - 1) && (students[i] - students[j]).abs < diff
+        diff = (students[i] - students[j]).abs
+        ans = [students[i], students[j]]
+     end
+  end
+end
+puts ans.sort
+
+# 演習
+people = [*1..100]
+cmds = [
+  ["resize", "29"], 
+  ["reverse"], 
+  ["swap", "18", "24"], 
+  ["resize", "47"],
+  ["reverse"]
+]
+
+cmds.each do |cmd|
+  c = cmd[0]
+  c1 = cmd[1].to_i
+  c2 = cmd[2].to_i
+
+   if c ==  "swap"
+       a = c1 - 1
+       b = c2 - 1
+       tmp = people[a]
+       people[a] = people[b]
+       people[b] = tmp
+   elsif c == "reverse"
+       people = people.reverse
+   else
+       if people.length > c1
+          people = people.shift(c1)
+       end
+   end
+end
+puts people
