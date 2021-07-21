@@ -201,3 +201,76 @@ cmds.each do |cmd|
    end
 end
 puts people
+
+# 最大値の求め方
+n1, k1 = 3, 3
+rows = [
+  [226, 409, 419],
+  [491, 524, 82],
+  [417, 954, 751],
+]
+ans = 0
+n1.times do |i|
+   k1.times do |j|
+      if rows[i][j] > ans
+         ans = rows[i][j] 
+      end
+   end
+end
+puts ans
+
+# 2次元配列の行と列の入れ替え１
+arr32 = [
+  [1,2,3],
+  [4,5,6],
+]
+new_arr32 = arr32.transpose
+new_arr32.each do |row|
+  puts row.join(' ')
+end
+
+# 2次元配列の行と列の入れ替え２
+n2 = 2
+k2 = 3
+arr33 = [
+  [1,2,3],
+  [4,5,6],
+]
+new1 = []
+k2.times do |i|
+  row = []
+  n2.times do |j|
+      if j == n2 - 1
+         row << arr33[j][i] 
+      else
+         row << arr33[j][i]
+      end
+  end
+  new1 << row
+end
+new1.each do |x|
+   puts x.join(' ') 
+end
+
+# 素数判定
+n = 10
+prime_nums = []
+(1..n).each do |i|
+    next if i == 1
+    
+    if i == 2
+       prime_nums << i 
+       next
+    end
+    
+    judge = true
+    prime_nums.each do |number|
+      if i % number == 0
+        judge = false
+        break
+      end
+  end
+
+  prime_nums.push(i) if judge
+end
+puts prime_nums.length
