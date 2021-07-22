@@ -143,9 +143,9 @@ arr29 = arr29.insert(3, 10) # 第1引数に場所、第2引数に追加する値
 p arr29
 
 # 各要素のペアについてのかけ算
-n = 5
+n2 = 5
 arr30 = [1, 2, 3, 4, 5]        
-n.times do |i|
+n2.times do |i|
     i.times do |j|
         # puts "#{arr30[i]} * #{arr30[j]}"
         puts arr30[i] * arr30[j]     
@@ -157,12 +157,12 @@ arr31 = Array.new(10, 1) # 第1引数に要素の数、第2引数で初期値の
 p arr31
 
 # 一つの配列の値の比較
-n = 5
+n3 = 5
 students = [119,102,187,191,132]
 ans = []
 diff = 101
-(0..n).each do |i|
-  ((i+1)..n).each do |j|
+(0..n3).each do |i|
+  ((i+1)..n3).each do |j|
      if i < (students.length - 1) && j < (students.length - 1) && (students[i] - students[j]).abs < diff
         diff = (students[i] - students[j]).abs
         ans = [students[i], students[j]]
@@ -203,14 +203,14 @@ end
 puts people
 
 # 最大値の求め方
-n1, k1 = 3, 3
+n4, k1 = 3, 3
 rows = [
   [226, 409, 419],
   [491, 524, 82],
   [417, 954, 751],
 ]
 ans = 0
-n1.times do |i|
+n4.times do |i|
    k1.times do |j|
       if rows[i][j] > ans
          ans = rows[i][j] 
@@ -230,7 +230,7 @@ new_arr32.each do |row|
 end
 
 # 2次元配列の行と列の入れ替え２
-n2 = 2
+n5 = 2
 k2 = 3
 arr33 = [
   [1,2,3],
@@ -239,7 +239,7 @@ arr33 = [
 new1 = []
 k2.times do |i|
   row = []
-  n2.times do |j|
+  n5.times do |j|
       if j == n2 - 1
          row << arr33[j][i] 
       else
@@ -253,9 +253,9 @@ new1.each do |x|
 end
 
 # 素数判定
-n = 10
+n6 = 10
 prime_nums = []
-(1..n).each do |i|
+(1..n6).each do |i|
     next if i == 1
     
     if i == 2
@@ -274,3 +274,15 @@ prime_nums = []
   prime_nums.push(i) if judge
 end
 puts prime_nums.length
+
+# log2の求め方
+n7 = 10
+answer = 0
+(1..(n7+1)).each do |i|
+   now = i
+   while now % 2 == 0
+    now /= 2
+    answer += 1
+   end
+end
+puts answer
