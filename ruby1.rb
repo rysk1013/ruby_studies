@@ -286,3 +286,16 @@ answer = 0
    end
 end
 puts answer
+
+# フィボナッチ数
+n8 = 10
+arr34 = []
+n8.times do |i|
+  if i == 0 || i == 1
+    arr34 << i
+  else
+    fiv = arr34[i - 2] + arr34[i - 1]
+    arr34 << fiv
+  end
+end
+p arr34
