@@ -96,5 +96,30 @@ def binary_search2(key, input)
 
   return "nothing"
 end
-
 puts binary_search2(5, input2)
+
+# 挿入ソート
+n = 5
+arr1 = [4, 1, 3, 5, 2]
+
+def insertion_sort(arr)
+    i = 0
+    
+    while i < (arr.length - 1)
+        x = arr[i+1]
+        k = i+1
+        
+        while (k > 0) && arr[k-1] > x
+            arr[k] = arr[k-1]
+            k = k-1
+        end
+        
+        arr[k] = x 
+        i += 1
+        
+        p arr
+    end
+    
+    arr
+end
+insertion_sort(arr1)
