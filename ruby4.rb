@@ -99,6 +99,7 @@ end
 puts binary_search2(5, input2)
 
 # 挿入ソート
+# 一番小さなデータを選択して、先頭から順に並べ替えていく
 n = 5
 arr1 = [4, 1, 3, 5, 2]
 
@@ -123,3 +124,29 @@ def insertion_sort(arr)
     arr
 end
 insertion_sort(arr1)
+
+# バブルソート
+# 隣り合う要素の大小を比較し小さい方が左になるように並べ替えていく
+arr2 = [10, 9, 8, 7, 6]
+def bubble_sort(arr)
+  k = 0
+
+  while k < arr.length - 1
+    i = 0
+
+    while i < arr.length - 1
+      if arr[i] > arr[i + 1]
+        tmp = arr[i]
+        arr[i] = arr[i + 1]
+        arr[i + 1] = tmp
+      end
+
+      i += 1
+    end
+
+    k += 1
+    p arr
+  end
+  arr
+end
+bubble_sort(arr2)
